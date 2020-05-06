@@ -14,7 +14,6 @@ flask-cors = "*"
 flask-heroku = "*"
 environs = "*"
 gunicorn = "*"
-bcrypt = "*"
 flask-bcrypt = "*"
 psycopg2-binary = "*"
 
