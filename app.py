@@ -6,6 +6,7 @@ from flask_heroku import Heroku
 from environs import Env
 # from sqlalchemy.ext.hybrid import hybrid_property
 from flask_bcrypt import Bcrypt
+import psycopg2
 # import bcrypt
 import os
 
@@ -28,6 +29,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
+# conn = psycopg2.connect(db)
 
 # Create ASL Table
 class User(db.Model):
