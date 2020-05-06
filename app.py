@@ -57,7 +57,7 @@ class User(db.Model):
         self.testTwoPassed = testTwoPassed
         self.testThreeHighScore = testThreeHighScore
         self.testThreePassed = testThreePassed
-        self.password = bcrypt.generate_password_hash(password)
+        self.password = bcrypt.generate_password_hash(password).decode(‘utf-8’)
 
 
 class UserSchema(ma.Schema):
