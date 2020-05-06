@@ -13,7 +13,7 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 CORS(app)
 heroku = Heroku(app)
-
+ 
 env = Env()
 env.read_env()
 DATABASE_URL = env("DATABASE_URL")
