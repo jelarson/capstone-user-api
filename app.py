@@ -13,7 +13,7 @@ app = Flask(__name__)
 bcrypt = Bcrypt(app)
 CORS(app)
 heroku = Heroku(app)
- 
+
 env = Env()
 env.read_env()
 DATABASE_URL = env("DATABASE_URL")
@@ -57,7 +57,7 @@ class User(db.Model):
         self.testTwoPassed = testTwoPassed
         self.testThreeHighScore = testThreeHighScore
         self.testThreePassed = testThreePassed
-        self.password = bcrypt.generate_password_hash(password).decode(‘utf-8’)
+        self.password = bcrypt.generate_password_hash(password)
 
 
 class UserSchema(ma.Schema):
